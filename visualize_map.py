@@ -7,14 +7,7 @@ import branca.colormap as cm
 
 data = read_csv('data.csv', header=0, parse_dates=[0], squeeze=True)
 
-print(data)
-
 m = folium.Map(location = [data.iat[1,1], data.iat[1,2]])
-
-print(cm.linear)
-
-for cmap in cm.linear._colormaps:
-    print(cmap)
 
 for _, row in data.iterrows():
     lat = row[1]

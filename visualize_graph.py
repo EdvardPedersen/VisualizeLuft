@@ -7,7 +7,6 @@ from bokeh.models import ColumnDataSource
 data = read_csv('data.csv', header=0, parse_dates=[0], squeeze=True)
 data = data.set_index('timestamp')
 data = data.resample('30S').mean()
-print(data)
 source = ColumnDataSource(data)
 
 
